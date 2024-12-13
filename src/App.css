@@ -1,0 +1,16 @@
+html {
+  --theme-color: #f7df1e;
+}
+
+body {
+  background: #f8fafc;
+  margin: 0;
+}
+
+#app {
+  font-family: satoshi, sans;
+}
+
+a {
+  color: #3370ff;
+}

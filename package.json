@@ -1,0 +1,25 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "prepare": "husky",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@iconify-json/logos": "^1.2.3",
+    "solid-js": "^1.9.3",
+    "unocss": "^0.65.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.11.2",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@typed-sigterm/eslint-config": "^1.4.0",
+    "eslint": "^9.16.0",
+    "husky": "^9.1.7",
+    "vite": "^6.0.3",
+    "vite-plugin-solid": "^2.11.0"
+  }
+}
