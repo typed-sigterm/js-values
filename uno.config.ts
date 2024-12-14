@@ -1,3 +1,4 @@
+import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local';
 import { defineConfig, presetIcons, presetUno, presetWebFonts } from 'unocss';
 
 export default defineConfig({
@@ -15,6 +16,11 @@ export default defineConfig({
           provider: 'fontshare',
         },
       },
+      processors: createLocalFontProcessor({
+        cacheDir: 'node_modules/.cache/unocss/fonts',
+        fontAssetsDir: 'public/assets/fonts',
+        fontServeBaseUrl: '/assets/fonts',
+      }),
     }),
   ],
 });
