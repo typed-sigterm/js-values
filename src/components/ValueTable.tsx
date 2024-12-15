@@ -32,7 +32,7 @@ export const ValueTable: Component = () => {
   const kv = Object.entries(Values);
 
   return (
-    <table class="text-right font-inconsolata mx-auto select-none">
+    <table class="text-right mx-auto">
       <tbody>
         <tr>
           <td />
