@@ -1,21 +1,30 @@
+import type { DataType } from 'csstype';
 import { type Component, createEffect, createSignal, For } from 'solid-js';
-import { Values } from '../values';
+import { Colors, Values } from '../values';
 
 const Cell: Component<{
   v1: any
   v2: any
 }> = (props) => {
-  const [eq, setEq] = createSignal(false);
+  const [color, setColor] = createSignal<DataType.Color>(Colors.else);
   createEffect(() => {
     const v1 = props.v1(), v2 = props.v2();
     // eslint-disable-next-line eqeqeq
-    setEq(v1 == v2);
+    const eq3 = v1 === v2, eq2 = v1 == v2, le = v1 <= v2, ge = v1 >= v2;
+    if (eq3)
+      setColor(Colors.eq3);
+    else if (eq2)
+      setColor(Colors.eq2);
+    else if (le && ge)
+      setColor(Colors['le+ge']);
+    else if (le)
+      setColor(Colors.le);
+    else if (ge)
+      setColor(Colors.ge);
   });
 
   return (
-    <td
-      style={{ background: eq() ? 'green' : 'lightgray' }}
-    />
+    <td style={{ background: color() }} />
   );
 };
 
