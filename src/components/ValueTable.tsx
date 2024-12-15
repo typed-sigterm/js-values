@@ -38,7 +38,7 @@ export const ValueTable: Component = () => {
           <td />
           <For each={kv}>
             {([name]) => (
-              <th class="mr-20 font-normal write-vertical-left">
+              <th class="font-normal write-vertical-left">
                 {name}
                 &thinsp;
               </th>

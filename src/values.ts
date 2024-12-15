@@ -10,7 +10,7 @@ export const Values: Record<string, () => any> = {
   '[[]]': () => [[]],
   '""': () => '',
   'new String()': () => new String(),
-  '0': () => 0,
+  ' 0': () => 0, // add a space to avoid key sorting
   'new Number(0)': () => new Number(0),
   '"0"': () => '0',
   'new String(0)': () => new String(0),
@@ -18,7 +18,7 @@ export const Values: Record<string, () => any> = {
   'true': () => true,
   '"true"': () => 'true',
   'new Boolean(1)': () => new Boolean(1),
-  '1': () => 1,
+  ' 1': () => 1,
   'new Number(1)': () => new Number(1),
   '"1"': () => '1',
   'new String(1)': () => new String(1),
@@ -30,7 +30,7 @@ export const Values: Record<string, () => any> = {
   '[-1]': () => [-1],
   'Infinity': () => Infinity,
   '-Infinity': () => -Infinity,
-  'new Object()': () => new Object(),
+  '{}': () => ({}),
   'NaN': () => Number.NaN,
 };
 
